@@ -252,11 +252,12 @@ https://codepen.io/bradtraversy/pen/vMGBjQ?editors=1100 */
 .h3-index {
   font-family: var(--font-main);
   font-weight: var(--font-bold);
-  font-size: 30px;
+  font-size: 25px;
   font-style: italic;
   font-weight: 400;
   margin-top: 8rem;
   border-bottom: 4px slateblue;
+  text-align: center;
 }
 
 .content-index {
@@ -1456,6 +1457,7 @@ footer {
     padding-left: 3rem;
     font-size: 30px;
     z-index: 2;
+    transition: transform 0.5s ease-in-out;
   }
 
   .my-logo:hover{
@@ -1490,6 +1492,7 @@ footer {
   font-weight: 700;
   color: var(--primary-light);
   margin-right: 2rem;
+  transition: transform 0.5s ease-in-out;
   }
 
   ul a:hover {
@@ -1756,10 +1759,12 @@ footer {
     width: 18rem;
     padding: 1rem;
     font-size: 2rem;
+    transition: transform 0.5s ease-in-out;
   }
 
   .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    opacity: 0.8;
   }
   
   .icon-index {
