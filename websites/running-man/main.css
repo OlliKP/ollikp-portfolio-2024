@@ -1,0 +1,86 @@
+html,body {
+  margin:0;
+  padding:0;
+  background-color:#222;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+}
+
+video {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 10vw;
+}
+
+#text {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 8vw;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 22vw;
+  width: 100vw;
+  text-shadow: -10px 5px 0px rgb(196, 104, 6);
+  text-align: center;
+  transition: opacity 1s ease; /* CSS transition for smoother fading */
+}
+
+.mobile-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100dvh;
+
+  h3{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding-inline: 10vw;
+    font-size: 6vw;
+  }
+
+  img {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+} 
+
+@media only screen and (min-width: 500px) {
+  video {
+    display: block;
+  }
+  
+  .mobile-box {
+    display: none;
+  }
+
+  #text {
+    display: block;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    pointer-events: none; /* To make sure the hidden element doesn't capture mouse events */
+  }
+  
+}
