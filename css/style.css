@@ -29,8 +29,24 @@ html {
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--primary-dark);
 }
 
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-light);
+  border-radius: 10px;
+  border: 3px solid var(--primary-dark);
+}
 
 a {
   /* Fjerner understreg og skift af farve på links */
@@ -1415,10 +1431,17 @@ footer {
 
 .email-link {
   font-family: var(--font-main);
-  font-size: 35px;
+  font-size: 22px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
+  transition: 0.5s ease-in-out;
+}
+
+.email-link:hover {
+  transform: scale(1.03);
+  color: blue;
+  text-decoration: underline;
 }
 
 .email-link-visuals {
@@ -1449,7 +1472,13 @@ footer {
 .some-icons {
   width: 75px;
   height: auto;
+  border-radius: var(--rounded);
+  transition: transform 0.5s ease-in-out;
+}
 
+.some-icons:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .buddy-mobile {
@@ -1746,7 +1775,7 @@ footer {
   }
 
   img.oceanone-visual {
-    width:55%;
+    width:50%;
     height: auto;
     right: 0;
         left: auto;
@@ -2389,8 +2418,9 @@ footer {
   /* ------------------- Footer ------------------- */
 
   .email-link {
-    font-size: 6.5rem;
+    font-size: 4rem;
   }
+  
 
   .email-link-visuals {
     font-size: 6.5rem;
